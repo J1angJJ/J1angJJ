@@ -10,13 +10,6 @@
   </ul>
 </div>
 
-<!--- snake -->
-
-<div align="center">
-  <img  src="https://github.com/J1angJJ/J1angJJ/blob/readme/resources/grid-snake.svg"
-       alt="snake" /></a>
-</div>
-
 <!--h2 without bottom border-->
 
 <div id="user-content-toc">
