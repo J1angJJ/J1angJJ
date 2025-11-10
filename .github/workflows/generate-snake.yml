@@ -16,10 +16,15 @@ jobs:
         run: mkdir -p readme/resources
 
       - name: Generate Snake
-        uses: Platane/snk@v1
+        uses: Platane/snk@v2
         with:
           github_user_name: J1angJJ
-          svg_out_path: readme/resources/grid-snake.svg
+
+      - name: Move file
+        run: mv dist/github-contribution-grid-snake.svg readme/resources/grid-snake.svg
+
+      - name: Check generated file
+        run: ls -la readme/resources/
 
       - name: Commit and push
         run: |
