@@ -12,8 +12,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Create directory
-        run: mkdir -p readme/resources
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y git
 
       - name: Generate Snake
         uses: Platane/snk@v2
@@ -21,7 +21,9 @@ jobs:
           github_user_name: J1angJJ
 
       - name: Move file
-        run: mv dist/github-contribution-grid-snake.svg readme/resources/grid-snake.svg
+        run: |
+          mkdir -p readme/resources
+          mv dist/github-contribution-grid-snake.svg readme/resources/grid-snake.svg
 
       - name: Check generated file
         run: ls -la readme/resources/
