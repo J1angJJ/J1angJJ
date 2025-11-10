@@ -16,7 +16,7 @@ jobs:
         run: mkdir -p readme/resources
 
       - name: Generate Snake
-        uses: Platane/snk@master
+        uses: Platane/snk@v1
         with:
           github_user_name: J1angJJ
           svg_out_path: readme/resources/grid-snake.svg
