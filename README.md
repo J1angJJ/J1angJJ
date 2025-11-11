@@ -73,7 +73,7 @@
 <!--tech stack icons-->
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=git,cpp,docker,github,linux,md,py,vscode&perline=14" />
+    <img src="https://skillicons.dev/icons?i=anaconda,c,docker,git,github,latex,linux,md,py,pytorch,ros,ubuntu,vscode&perline=14" />
   </a>
 </p>
 
