@@ -81,12 +81,16 @@ function buildSvg(languages, dark = false) {
   const top = languages.slice(0, 6);
   const bg = dark ? "#0d1117" : "#ffffff";
   const border = dark ? "#30363d" : "#d0d7de";
+  const subtle = dark ? "#161b22" : "#f6f8fa";
   const title = dark ? "#e6edf3" : "#24292f";
   const text = dark ? "#c9d1d9" : "#57606a";
   const muted = dark ? "#8b949e" : "#6e7781";
   const width = 520;
-  const rowHeight = 30;
-  const height = 82 + top.length * rowHeight;
+  const rowHeight = 34;
+  const headerY = 34;
+  const barY = 72;
+  const rowStartY = 112;
+  const height = rowStartY + top.length * rowHeight + 18;
 
   let offset = 0;
   const bar = top
@@ -95,18 +99,18 @@ function buildSvg(languages, dark = false) {
       const color = languageColors[language] || "#6e7781";
       const x = offset;
       offset += pct;
-      return `<rect x="${x.toFixed(3)}%" y="0" width="${pct.toFixed(3)}%" height="10" fill="${color}"/>`;
+      return `<rect x="${x.toFixed(3)}%" y="0" width="${pct.toFixed(3)}%" height="12" fill="${color}"/>`;
     })
     .join("");
 
   const rows = top
     .map(([language, bytes], index) => {
       const pct = total ? ((bytes / total) * 100).toFixed(1) : "0.0";
-      const y = 74 + index * rowHeight;
+      const y = rowStartY + index * rowHeight;
       const color = languageColors[language] || "#6e7781";
       return [
-        `<circle cx="34" cy="${y - 5}" r="5" fill="${color}"/>`,
-        `<text x="48" y="${y}" fill="${text}" font-size="14" font-weight="600">${escapeXml(language)}</text>`,
+        `<circle cx="34" cy="${y - 5}" r="5.5" fill="${color}"/>`,
+        `<text x="50" y="${y}" fill="${text}" font-size="14" font-weight="600">${escapeXml(language)}</text>`,
         `<text x="486" y="${y}" fill="${muted}" font-size="13" text-anchor="end">${pct}%</text>`,
       ].join("");
     })
@@ -116,10 +120,12 @@ function buildSvg(languages, dark = false) {
   <title id="title">Most used languages</title>
   <desc id="desc">Most used languages across public source repositories owned by ${escapeXml(owner)}.</desc>
   <rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="6" fill="${bg}" stroke="${border}"/>
-  <text x="24" y="34" fill="${title}" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Most Used Languages</text>
-  <text x="24" y="55" fill="${muted}" font-family="Segoe UI, Arial, sans-serif" font-size="12">Public source repositories</text>
-  <g transform="translate(24 64)">
-    <clipPath id="bar-clip"><rect width="472" height="10" rx="5"/></clipPath>
+  <rect x="16" y="16" width="488" height="72" rx="6" fill="${subtle}"/>
+  <text x="28" y="${headerY}" fill="${title}" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Most Used Languages</text>
+  <text x="28" y="56" fill="${muted}" font-family="Segoe UI, Arial, sans-serif" font-size="12">Public source repositories, refreshed by GitHub Actions</text>
+  <g transform="translate(28 ${barY})">
+    <clipPath id="bar-clip"><rect width="464" height="12" rx="6"/></clipPath>
+    <rect width="464" height="12" rx="6" fill="${border}"/>
     <g clip-path="url(#bar-clip)">${bar}</g>
   </g>
   <g font-family="Segoe UI, Arial, sans-serif">${rows}</g>
