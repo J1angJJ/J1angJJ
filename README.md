@@ -41,8 +41,9 @@
 ## Contribution Snake
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="readme/resources/grid-snake.svg">
-  <img src="readme/resources/grid-snake.svg" alt="GitHub contribution snake animation">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/J1angJJ/J1angJJ/main/readme/resources/grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/J1angJJ/J1angJJ/main/readme/resources/grid-snake.svg">
+  <img src="https://raw.githubusercontent.com/J1angJJ/J1angJJ/main/readme/resources/grid-snake.svg" alt="GitHub contribution snake animation">
 </picture>
 
 ## Connect
