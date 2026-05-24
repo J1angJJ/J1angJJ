@@ -13,7 +13,13 @@
 
 ## GitHub Activity
 
-The dynamic contribution snake below is generated from my GitHub activity and updated by GitHub Actions.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="readme/resources/languages-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="readme/resources/languages.svg">
+  <img src="readme/resources/languages.svg" alt="Most used languages">
+</picture>
+
+The contribution snake below is generated from my GitHub activity and updated by GitHub Actions.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="readme/resources/grid-snake-dark.svg">

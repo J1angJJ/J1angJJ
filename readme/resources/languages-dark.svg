@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="142" viewBox="0 0 520 142" role="img" aria-labelledby="title desc">
+  <title id="title">Most used languages</title>
+  <desc id="desc">Most used languages across public source repositories owned by J1angJJ.</desc>
+  <rect x="0.5" y="0.5" width="519" height="141" rx="6" fill="#0d1117" stroke="#30363d"/>
+  <text x="24" y="34" fill="#e6edf3" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Most Used Languages</text>
+  <text x="24" y="55" fill="#8b949e" font-family="Segoe UI, Arial, sans-serif" font-size="12">Public source repositories</text>
+  <g transform="translate(24 64)">
+    <clipPath id="bar-clip"><rect width="472" height="10" rx="5"/></clipPath>
+    <g clip-path="url(#bar-clip)"><rect x="0.000%" y="0" width="94.350%" height="10" fill="#3572A5"/><rect x="94.350%" y="0" width="5.650%" height="10" fill="#3178c6"/></g>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif"><circle cx="34" cy="69" r="5" fill="#3572A5"/><text x="48" y="74" fill="#c9d1d9" font-size="14" font-weight="600">Python</text><text x="486" y="74" fill="#8b949e" font-size="13" text-anchor="end">94.4%</text><circle cx="34" cy="99" r="5" fill="#3178c6"/><text x="48" y="104" fill="#c9d1d9" font-size="14" font-weight="600">TypeScript</text><text x="486" y="104" fill="#8b949e" font-size="13" text-anchor="end">5.6%</text></g>
+</svg>
