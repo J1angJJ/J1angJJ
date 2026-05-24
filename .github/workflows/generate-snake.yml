@@ -2,38 +2,34 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # 每天午夜运行
-  workflow_dispatch:  # 允许手动触发
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   generate:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Checkout main
+        uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: sudo apt-get update && sudo apt-get install -y git
-
-      - name: Generate Snake
-        uses: Platane/snk@v2
+      - name: Generate snake
+        uses: Platane/snk@v3
         with:
           github_user_name: J1angJJ
+          outputs: readme/resources/grid-snake.svg
 
-      - name: Move file
+      - name: Commit generated snake
         run: |
-          mkdir -p readme/resources
-          mv dist/github-contribution-grid-snake.svg readme/resources/grid-snake.svg
-
-      - name: Check generated file
-        run: ls -la readme/resources/
-
-      - name: Commit and push
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add readme/resources/grid-snake.svg
-          git commit -m "Update snake animation" || echo "No changes to commit"
-          git push origin readme
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update snake animation"
+            git push
+          fi
