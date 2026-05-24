@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="198" viewBox="0 0 520 198" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="240" viewBox="0 0 520 240" role="img" aria-labelledby="title desc">
   <title id="title">Most used languages</title>
   <desc id="desc">Most used languages across public source repositories owned by J1angJJ.</desc>
-  <rect x="0.5" y="0.5" width="519" height="197" rx="6" fill="#ffffff" stroke="#d0d7de"/>
-  <rect x="16" y="16" width="488" height="72" rx="6" fill="#f6f8fa"/>
+  <rect x="0.5" y="0.5" width="519" height="239" rx="6" fill="#ffffff" stroke="#d0d7de"/>
+  <rect x="16" y="16" width="488" height="86" rx="6" fill="#f6f8fa"/>
   <text x="28" y="34" fill="#24292f" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Most Used Languages</text>
-  <text x="28" y="56" fill="#6e7781" font-family="Segoe UI, Arial, sans-serif" font-size="12">Public source repositories, refreshed by GitHub Actions</text>
-  <g transform="translate(28 72)">
-    <clipPath id="bar-clip"><rect width="464" height="12" rx="6"/></clipPath>
-    <rect width="464" height="12" rx="6" fill="#d0d7de"/>
-    <g clip-path="url(#bar-clip)"><rect x="0.000%" y="0" width="94.350%" height="12" fill="#3572A5"/><rect x="94.350%" y="0" width="5.650%" height="12" fill="#3178c6"/></g>
+  <text x="28" y="56" fill="#6e7781" font-family="Segoe UI, Arial, sans-serif" font-size="12">Public source repositories, sorted by total bytes</text>
+  <g transform="translate(28 76)">
+    <clipPath id="total-bar-clip"><rect width="464" height="14" rx="7"/></clipPath>
+    <rect width="464" height="14" rx="7" fill="#eaeef2"/>
+    <g clip-path="url(#total-bar-clip)"><rect x="0.000%" y="0" width="94.350%" height="14" fill="#3572A5" stroke="#ffffff" stroke-width="1"/><rect x="94.350%" y="0" width="5.650%" height="14" fill="#3178c6" stroke="#ffffff" stroke-width="1"/></g>
   </g>
-  <g font-family="Segoe UI, Arial, sans-serif"><circle cx="34" cy="107" r="5.5" fill="#3572A5"/><text x="50" y="112" fill="#57606a" font-size="14" font-weight="600">Python</text><text x="486" y="112" fill="#6e7781" font-size="13" text-anchor="end">94.4%</text><circle cx="34" cy="141" r="5.5" fill="#3178c6"/><text x="50" y="146" fill="#57606a" font-size="14" font-weight="600">TypeScript</text><text x="486" y="146" fill="#6e7781" font-size="13" text-anchor="end">5.6%</text></g>
+  <g font-family="Segoe UI, Arial, sans-serif"><circle cx="34" cy="113" r="5.5" fill="#3572A5"/><text x="48" y="118" fill="#57606a" font-size="14" font-weight="600">Python</text><text x="492" y="118" fill="#6e7781" font-size="13" text-anchor="end">94.4%</text><rect x="28" y="131" width="464" height="12" rx="6" fill="#eaeef2"/><rect x="28" y="131" width="437.8" height="12" rx="6" fill="#3572A5"/><circle cx="34" cy="161" r="5.5" fill="#3178c6"/><text x="48" y="166" fill="#57606a" font-size="14" font-weight="600">TypeScript</text><text x="492" y="166" fill="#6e7781" font-size="13" text-anchor="end">5.6%</text><rect x="28" y="179" width="464" height="12" rx="6" fill="#eaeef2"/><rect x="28" y="179" width="26.2" height="12" rx="6" fill="#3178c6"/></g>
 </svg>
